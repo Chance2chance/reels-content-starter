@@ -1,1 +1,35 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reels Content Starter</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:600px;margin:0 auto;padding:20px;line-height:1.5}
+label{display:block;margin-top:14px;font-weight:600}
+input{width:100%;padding:10px;font-size:1rem;box-sizing:border-box}
+button{margin-top:16px;padding:12px 18px;font-size:1rem}
+pre{background:#f4f4f4;padding:12px;white-space:pre-wrap}
+</style>
+</head>
+<body>
+<h1>Reels Content Starter</h1>
+<label>Téma videa<input id="topic"></label>
+<label>Cílová skupina<input id="audience"></label>
+<label>CTA<input id="cta" value="Ulož si to a pošli kolegovi"></label>
+<button onclick="gen()">Vytvořit kostru</button>
+<pre id="out"></pre>
+<script>
+function gen(){
+  const t=topic.value, a=audience.value, c=cta.value;
+  out.textContent=
+`HOOK (0–3 s): Chyba, kvůli které ${a||'lidé'} ztrácí dosah u tématu "${t}"
+PROBLÉM (3–8 s): Proč to nefunguje
+ŘEŠENÍ (8–22 s): 3 konkrétní kroky
+DŮKAZ (22–27 s): Výsledek nebo příklad
+CTA (27–30 s): ${c}`;
+}
+</script>
+</body>
+</html>
 
